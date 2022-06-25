@@ -2,10 +2,14 @@ package com.example.hello.object_mapping.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import javax.validation.constraints.NotBlank;
+
 public class Car {
     private String name;
+    @NotBlank
     @JsonProperty("car_number")
     private String carNumber;
+    @NotBlank
     @JsonProperty("TYPE")
     private String type;
 

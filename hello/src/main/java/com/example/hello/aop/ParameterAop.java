@@ -23,8 +23,10 @@ public class ParameterAop {
         Object[] args = joinPoint.getArgs();
 
         for(Object arg : args){
+            System.out.println("---------------aop-----------------------");
             System.out.println("type : "+arg.getClass().getSimpleName());
             System.out.println("value : "+arg);
+            System.out.println("---------------aop-----------------------");
         }
     }
 

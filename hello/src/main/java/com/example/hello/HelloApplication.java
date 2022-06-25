@@ -6,13 +6,18 @@ import com.example.hello.Ioc.Encoder;
 import com.example.hello.Ioc.UrlEncoder;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.scheduling.annotation.EnableAsync;
 
 import java.util.Base64;
 
+
 @SpringBootApplication
+@ServletComponentScan   // 특정 컨트롤러 필터
+@EnableAsync    //비동기화
 public class HelloApplication {
 
     public static void main(String[] args) {
