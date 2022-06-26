@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DollarCalculatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-06-26T08:27:25" hostname="DoGyunui-MacBookPro.local" time="0.354">
+  <properties/>
+  <testcase name="dollarTest()" classname="DollarCalculatorTest" time="0.354"/>
+  <system-out><![CDATA[90000
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
