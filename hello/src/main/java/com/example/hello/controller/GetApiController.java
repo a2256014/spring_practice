@@ -60,7 +60,7 @@ public class GetApiController {
     @GetMapping("/query-param3")
     public String queryParam3(UserRequest userRequest){
         System.out.println(userRequest.getName());
-        System.out.println(userRequest.getEmail());
+//        System.out.println(userRequest.getEmail());
 
         return userRequest.toString();
     }

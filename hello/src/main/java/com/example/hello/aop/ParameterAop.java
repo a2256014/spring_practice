@@ -20,14 +20,14 @@ public class ParameterAop {
         Method method = methodSignature.getMethod();
         System.out.println("method : "+method.getName());
 
+        System.out.println("---------------aop-----------------------");
         Object[] args = joinPoint.getArgs();
 
         for(Object arg : args){
-            System.out.println("---------------aop-----------------------");
             System.out.println("type : "+arg.getClass().getSimpleName());
             System.out.println("value : "+arg);
-            System.out.println("---------------aop-----------------------");
         }
+        System.out.println("---------------aop-----------------------");
     }
 
     @AfterReturning(value = "cut()", returning = "obj")

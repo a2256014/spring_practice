@@ -1,4 +1,4 @@
-package com.example.client.dto;
+package com.example.hello.dto;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

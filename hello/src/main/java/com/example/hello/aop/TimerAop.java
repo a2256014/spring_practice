@@ -14,7 +14,7 @@ public class TimerAop {
     @Pointcut("execution(* com.example.hello.controller..*.*(..))")
     private void cut(){}
 
-    @Pointcut("@annotation(com.example.hello.annotation.Timer)")
+    @Pointcut("@annotation(com.example.hello.annotation.Timer)")    //어노테이션 적용 부분만 적용
     private void enableTimer(){}
 
     @Around("cut() && enableTimer()")
@@ -24,7 +24,7 @@ public class TimerAop {
 
         try {
             Object result = joinPoint.proceed();
-
+            System.out.println(result.toString());
         } catch (Throwable e) {
             throw new RuntimeException(e);
         }

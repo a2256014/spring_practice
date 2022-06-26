@@ -20,14 +20,11 @@ public class GlobalControllerAdvice {
 
     @ExceptionHandler(value = Exception.class)
     public ResponseEntity exception(Exception e) {
-        String[] problem = String.valueOf(e.getCause()).split(".");
-
         System.out.println("--------global Exception---------");
         System.out.println(e.getClass().getName());
         System.out.println(e.getLocalizedMessage());
         System.out.println("--------global Exception---------");
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("");
-
     }
 
     @ExceptionHandler(value = MethodArgumentNotValidException.class)
