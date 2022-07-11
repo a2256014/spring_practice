@@ -10,6 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 class HelloApplicationTests {
 
     @Test
+    //카멜 스네이크 변환 테스트
     void contextLoads() {
 
         var objectMapper = new ObjectMapper();

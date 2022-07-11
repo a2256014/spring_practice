@@ -4,6 +4,7 @@ import com.example.hello.annotation.YearMonthDay;
 import com.example.hello.object_mapping.dto.Car;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Component;
 
 import javax.validation.Valid;
 import javax.validation.constraints.Email;

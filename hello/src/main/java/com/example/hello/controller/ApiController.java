@@ -6,6 +6,7 @@ import com.example.hello.service.AsyncService;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
@@ -24,7 +25,6 @@ import java.util.concurrent.CompletableFuture;
 @Validated
 @RequiredArgsConstructor
 public class ApiController {
-
     private final AsyncService asyncService;
 
     @GetMapping("/hello")   //  http://localhost:9090/api/hello

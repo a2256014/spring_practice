@@ -1,17 +1,22 @@
+package com.example.hello.component;
+
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
+
+@Component
+@RequiredArgsConstructor
 public class Calculator {
-    private ICalculator iCalculator;
 
-    public Calculator(){}
+    private final ICalculator iCalculator;
 
-    public void init(ICalculator iCalculator){
-        this.iCalculator = iCalculator;
-    }
 
     public int sum(int x, int y){
+        this.iCalculator.init();
         return this.iCalculator.sum(x,y);
     }
 
     public int minus(int x, int y){
+        this.iCalculator.init();
         return this.iCalculator.minus(x,y);
     }
 }

@@ -1,15 +1,20 @@
+package com.example.hello.component;
+
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
+
+@Component
+@RequiredArgsConstructor
 public class DollarCalculator implements ICalculator{
 
     private int price = 1;
-    private MarketApi marketApi;
+    private final MarketApi marketApi;
 
-    public DollarCalculator(MarketApi marketApi){
-        this.marketApi = marketApi;
-    }
-
+    @Override
     public void init(){
         this.price = marketApi.connect();
     }
+
     //계산기에 커넥트 기능 필요없음
 //    public int connect(){
 //        return 1100;

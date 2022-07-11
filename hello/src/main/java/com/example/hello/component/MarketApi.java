@@ -1,3 +1,8 @@
+package com.example.hello.component;
+
+import org.springframework.stereotype.Component;
+
+@Component
 public class MarketApi {
 
     public int connect(){
